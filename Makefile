@@ -10,4 +10,6 @@ db-mig-up:
 
 db-mig-down:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5436/simple_bank?sslmode=disable" -verbose down
-    
+
+sqlc:
+	sqlc generate
