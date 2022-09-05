@@ -3,7 +3,7 @@ up:
 
 down:
 	docker stop simple_bank_db_1
-	docker container rm simple_bank_db_1
+	# docker container rm simple_bank_db_1
 
 db-mig-up:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5436/simple_bank?sslmode=disable" -verbose up
